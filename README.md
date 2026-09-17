@@ -109,3 +109,27 @@ Troubleshooting
 Microphone Permissions: If no audio is captured, go to System Settings -> Privacy & Security -> Microphone and ensure Terminal/iTerm is enabled.
 
 Accent Loss: Ensure "model_id": "eleven_multilingual_v2" is set in your profile JSON and similarity_boost is set between 0.80 and 0.90.
+
+# Pi 5 Setup
+# Raspberry Pi 5 Setup Guide & Voice Pipeline
+
+This guide details how to set up and run the Multi-Character AI Voice Assistant on a Raspberry Pi 5 running **Raspberry Pi OS (64-bit Bookworm)**.
+
+---
+
+## Hardware Requirements
+
+* **Single Board Computer:** Raspberry Pi 5 (4GB or 8GB RAM recommended)
+* **Microphone:** USB Microphone or USB Webcam with built-in mic
+* **Audio Output:** USB Speakers, HDMI display/audio, or I2S DAC HAT *(Note: Pi 5 omits the 3.5mm analog audio jack)*
+* **Power Supply:** Official 27W USB-C Power Supply
+
+---
+
+## 1. System Dependencies Installation
+
+Update system packages and install Linux audio libraries along with `mpv` for lightweight MP3/WAV playback:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3-dev python3-venv portaudio19-dev libasound2-dev mpv
