@@ -91,7 +91,3 @@ sudo systemctl daemon-reload
 sudo systemctl enable voice-assistant.service
 sudo systemctl start voice-assistant.service
 
-<ElicitationsGroup message="Next options for hardware deployment:">
-  <Elicitation label="Configure I2S DAC hardware settings for high quality audio" query="How do I configure Raspberry Pi boot overlays to output audio through an I2S DAC HAT like the Adafruit I2S DAC?"/>
-  <Elicitation label="Add push-to-talk button trigger via GPIO" query="How can I update voice_pipeline.py to use a physical button connected to the Pi 5 GPIO pins instead of silence detection?"/>
-</ElicitationsGroup>
